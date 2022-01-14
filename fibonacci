@@ -1,0 +1,17 @@
+n1 = int(input("enter the first starting point"))
+n2 = int(input("enter the second starting point"))
+seq = int(input("enter series sequence"))
+count = 0
+l=[]
+if int(n1) > int(n2):
+    print("first starting point can not be greater than second starting point")
+elif int(n1) < 0:
+    print("starting point can not be negative")
+else:
+    while count < int(seq):        
+        nth = n1 + n2
+        l.append(n1)
+        n1 = n2
+        n2 = nth
+        count = count + 1
+    print(l) 
